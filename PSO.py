@@ -1,1 +1,1 @@
-print('PSO')
+print()
