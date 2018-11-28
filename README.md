@@ -4,10 +4,10 @@
 <h2 align="center">Recommendation-System </h2>
 This is the recommendation system.<br>
 This is mini project by:<br>
-  <pre>1.Abhinav Rao </pre><br>
-  <pre>2.Akash Pateriya </pre><br>
-  <pre>3.Atul Singh Bhaduria</pre><br>
-  <pre>4.Abhishek Sharma.</pre><br>
+  <pre>1.Abhinav Rao </pre>
+  <pre>2.Akash Pateriya </pre>
+  <pre>3.Atul Singh Bhaduria</pre>
+  <pre>4.Abhishek Sharma.</pre>
 We all are working together for this project.In this we aim to recommend the movie using Linear Regression and PSO..<br>
 Join recommendation room at Gitter for Source code issues and other discussion about MultiRec.<br> 
 
