@@ -1,4 +1,7 @@
 # Recommendation-System
+
+[![Join the chat at https://gitter.im/MiniProject_recommendation-System/Lobby](https://badges.gitter.im/MiniProject_recommendation-System/Lobby.svg)](https://gitter.im/MiniProject_recommendation-System/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is the recommendation system.
 This is mini project by:
   1.Abhinav Rao 
