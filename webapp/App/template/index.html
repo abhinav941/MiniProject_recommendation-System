@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content%}
+
+    {% for movie in movies%}
+    <article class="media content-section">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">Movie Name: {{ movie.movie }}</a>
+                <small class="text-muted">Released : {{ movie.released }}</small>
+              </div>
+              <h3><a class="article-title" href="#">Release Date :{{ movie.on }}</a></h3>
+              <p class="article-content">Rating -> {{ movie.rating }}</p>
+            </div>
+        </article>
+    {% endfor %}
+
+{% endblock content%}
+
+
+
+
+
+
