@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block content%}
+{%if current_user.is_authenticated%}
+<h2>Top Movies.....</h2>
+<div class="movie-container row" style="display:row">
+{%for movie in recommended%} 
+<div class="media content-section col-4">
+  <div class="col-md-12">
+      <div class="row">
+          <img src="{{movie.image}}" alt="">
+          <div class="row">
+            <div class="col-12">
+                <span style=font-weight:bold;"> Rating : {{ movie.rating|string +'/10'}}</span>
+        
+            </div>
+            <div class="col-12"><p><a class="article-title" href="#"><strong>{{ movie.name }}</strong></a></p></div> 
+        
+          </div>
+        <form class="bookmark" method='POST' class="border-top">
+              {% if movie.name not in rated%}
+              <div class='success-box'>
+                {{ form.text_area(class='text-area')}}
+                {{form.movie(class='movie')}}
+                {{ form.submit(class="btn btn-outline-info save-btn x"+(loop.index-1)|string  )}}  
+              </div>
+              
+                <div class='rating-stars y{{loop.index-1}} text-center'>
+                  <span style="font-size:20px;">Rate:</span>
+                  <ul id='stars'>
+                    <li class='star' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Fair' data-value='2'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Good' data-value='3'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Excellent' data-value='4'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='WOW!!!' data-value='5'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+              {%else%}
+              <h3>Watched and rated </h3>
+              <h3>{{genre}}</h3>
+              {%endif%}
+        </div>
+  
+      </div>
+  
+  </div>
+  {%endfor%}
+
+  </div>
+  {%endif%}
+
+<h2> Top Movies.....</h2>
+<div class="movie-container row" style="display: flex;">
+  {% for movie in movies%}
+    
+    <article class="media content-section col-4" >
+    <div class="row col-md-12">
+        <img src="{{ movie.image }}" alt=""  height='240px'>
+        <div class="row">
+            
+            <div class="col-12">
+              <span style=font-weight:bold;"> Rating : {{ movie.rating|string +'/10'}}</span>
+            </div>
+            <div class="col-12"><p><a class="article-title" href="#"><strong>{{ movie.name }}</strong></a></p></div> 
+          </div>  
+            
+                
+            <form class="bookmark" method='POST' class="border-top">
+              {% if current_user.is_authenticated%}
+                {% if movie.name not in rated%}
+                <div class='success-box'>
+                  {{ form.text_area(class='text-area')}}
+                  {{form.movie(class='movie')}}
+                  {{ form.submit(class="btn btn-outline-info save-btn x"+(loop.index-1)|string  )}}  
+                </div>
+                
+                  <div class='rating-stars y{{loop.index-1}} text-center'>
+                    <span style="font-size:20px;">Rate:</span>
+                    <ul id='stars'>
+                      <li class='star' title='Poor' data-value='1'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                      <li class='star' title='Fair' data-value='2'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                      <li class='star' title='Good' data-value='3'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                      <li class='star' title='Excellent' data-value='4'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                      <li class='star' title='WOW!!!' data-value='5'>
+                        <i class='fa fa-star fa-fw'></i>
+                      </li>
+                    </ul>
+                  </div>
+                {%else%}
+                <h3>Watched and rated </h3>
+                <h3>{{genre}}</h3>
+                {%endif%}
+              {% else %}
+                  <div class="rate" style="font-weight:bold;  color:red">
+                    <a href="{{url_for('login')}}"> Login to rate ......</a>
+                  </div>
+              {%endif%}
+            </form>
+        </div>
+  </article>
+    {% endfor %}
+</div>
+    
+
+{% endblock content%}

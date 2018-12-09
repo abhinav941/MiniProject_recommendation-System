@@ -1,0 +1,174 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+.article-title {
+  color: #444444;
+  font-size: 20px;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+.form-control-borderless {
+  border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.success-box{
+visibility: hidden;
+height:0px;
+width:80%;
+bottom:0%;
+z-index:1;
+}
+
+.bookmark{
+display:flex;
+position: relative;
+}
+.wrapper{
+border:1px solid;
+border-radius:10px;
+width: 50px;
+height:50px;
+padding:10px 8px 6px 9px;
+position:absolute;
+bottom:2px;
+right:10px;
+}
+.wrapper:hover::after{
+content:'Add to favourite';
+font-size:15px;
+position:absolute;
+bottom:-48px;
+width: 130px;
+left:-40px;
+background: black;
+color:white;
+padding:10px;
+border-radius: 10px;
+}
+
+.wrapper:hover i::before{
+color:red;
+content:'\f004'
+}
+.rating-stars{
+display:flex;
+position:absolute;
+bottom:-10px;
+}
+
+.rating-stars ul {
+list-style-type:none;
+padding:0;
+display:flex;
+position:absolute;
+left:70px;
+bottom:-10px;
+-moz-user-select:none;
+-webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+display:inline-block;
+
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+font-size:1.0em; /* Change the size of the stars */
+color:#ccc; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+color:#FFCC36;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+color:#FF912C;
+}
+
+.save-btn{
+  position: absolute;
+  bottom:10px;
+  right:0%;
+}
